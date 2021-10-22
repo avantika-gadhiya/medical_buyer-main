@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="bluesharklabs.com.medical">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-feature android:name="android.hardware.location.gps" />
+
+
+    <application
+        android:name=".utils.AppController"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activities.FullQRImageActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.EditBuyerAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.WebviewPaymentActivity"
+            android:label="@string/title_activity_webview_payment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.ImgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ContactUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.TermsConditionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SliderSendFeedbackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ConsultMyDoctorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SliderFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MyOrdersDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MyOrdersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MyPrescriptionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MyProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.NotificationsActivity"
+            android:screenOrientation="portrait" />
+        <!--
+            <meta-data
+                 android:name="com.phonepe.android.sdk.PreCacheEnabled"
+                 android:value="true" />
+
+         &lt;!&ndash; Replace it with your merchant id &ndash;&gt;
+         <meta-data
+                 android:name="com.phonepe.android.sdk.MerchantId"
+                 android:value="M2306160483220675579140" />
+
+         &lt;!&ndash; Replace it with your android id given by PhonePe(unique for each signing key/SHA1) &ndash;&gt;
+         <meta-data
+                 android:name="com.phonepe.android.sdk.AppId"
+                 android:value="411014c27e5545eca8f44915015a8074" />
+         &lt;!&ndash; Keep it false in production environment&ndash;&gt;
+         <meta-data
+                 android:name="com.phonepe.android.sdk.Debuggable"
+                 android:value="true" />
+         &lt;!&ndash; Keep it false in production environment&ndash;&gt;
+         <meta-data
+                 android:name="com.phonepe.android.sdk.isUAT"
+                 android:value="true" />
+
+         <meta-data
+                 android:name="com.google.android.gms.wallet.api.enabled"
+                 android:value="true" />
+        -->
+        <activity
+            android:name=".activities.PlaceAutoCompleteActivity"
+            android:screenOrientation="portrait" />
+        <!--
+  <activity
+                android:name="com.paytm.pgsdk.PaytmPGActivity"
+                android:configChanges="keyboardHidden|orientation|keyboard"
+                android:screenOrientation="portrait" />
+        -->
+        <activity
+            android:name=".activities.CustomOrderSuccessfulActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.CustomStoreDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.CustomOrderPreferenceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.CustomAllProductsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.CustomFinalOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.CustomOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activities.EditPrescriptionOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.EditOrderPreferenceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.StoreOrderAcceptedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.RecentOrderViewAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PartialOrderOfferAcceptedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.FilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginactivities.Verify1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PartialCoverageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MyRatingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.RateStoreActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MakePaymentActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.TrackOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.InvoiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ViewOfferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.FullCoverageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.OfferAcceptedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.OrderSuccessfulActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.FindPlatformActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.StoreDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.FindStoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ImgFullscreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.FinalOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.OrderingForActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.OrderPreferenceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activities.PrescriptionOrderActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PrescriptionOrderViewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AttachPrescriptionActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginactivities.Register2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Register"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".loginactivities.Register1Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Register"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".loginactivities.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Register"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".loginactivities.VerifyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".loginactivities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"
+            android:screenOrientation="portrait" />
+        <!--
+ <meta-data
+                android:name="io.fabric.ApiKey"
+                android:value="d6580da141c7f7297540b63a73383496a092eb30" />
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyATHhOyieMoq-s5rEFliK5OozYxIdBtJp0" />
+
+        <service
+            android:name=".utils.MyBuyerFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

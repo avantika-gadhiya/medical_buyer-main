@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nested_location_price"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".loginactivities.VerifyActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/login_shape" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/dp_30" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_45"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_18"
+                android:fontFamily="@font/circularstd_bold"
+                android:text="@string/verify_num"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/img_logo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                android:fontFamily="@font/circularstd_book"
+                android:text="@string/verify_txt1"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/txt_login" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_book"
+                android:text="+91 1234 56789"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_otp_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_45"
+                android:background="@drawable/otp_box_empty"
+                android:focusable="true"
+                android:fontFamily="@font/circularstd_book"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintEnd_toStartOf="@+id/edt_otp_2"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_otp_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_45"
+                android:background="@drawable/otp_box_empty"
+                android:fontFamily="@font/circularstd_book"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintEnd_toStartOf="@+id/edt_otp_3"
+                app:layout_constraintStart_toEndOf="@+id/edt_otp_1"
+                app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_otp_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_45"
+                android:background="@drawable/otp_box_empty"
+                android:fontFamily="@font/circularstd_book"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintEnd_toStartOf="@+id/edt_otp_4"
+                app:layout_constraintStart_toEndOf="@+id/edt_otp_2"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_otp_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_45"
+                android:background="@drawable/otp_box_empty"
+                android:fontFamily="@font/circularstd_book"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintEnd_toStartOf="@+id/edt_otp_5"
+                app:layout_constraintStart_toEndOf="@+id/edt_otp_3"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_otp_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_45"
+                android:background="@drawable/otp_box_empty"
+                android:fontFamily="@font/circularstd_book"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintEnd_toStartOf="@+id/edt_otp_6"
+                app:layout_constraintStart_toEndOf="@id/edt_otp_4"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_otp_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_45"
+                android:background="@drawable/otp_box_empty"
+                android:fontFamily="@font/circularstd_book"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintEnd_toEndOf="@+id/guideline2"
+                app:layout_constraintStart_toEndOf="@id/edt_otp_5"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/ll1"
+                app:layout_constraintEnd_toEndOf="@+id/guideline2"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/edt_otp_3"
+                app:layout_constraintVertical_bias="0.191">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_verify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:background="@drawable/login_btn"
+                    android:fontFamily="@font/circularstd_bold"
+                    android:text="@string/verify"
+                    android:textColor="@color/colorWhite" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_resend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/circularstd_medium"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/resend_code"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black_txt"
+                    android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/guideline3"
+                app:layout_constraintEnd_toEndOf="@+id/guideline2"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="@+id/guideline">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="@string/dont_acc"
+                    android:textColor="@color/grey_txt"
+                    android:textSize="@dimen/sp_15" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:fontFamily="@font/circularstd_medium"
+                    android:text="@string/register"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/sp_15" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/dp_30" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="@dimen/dp_30" />
+
+        <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

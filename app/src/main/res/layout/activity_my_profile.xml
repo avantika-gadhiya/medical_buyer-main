@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".activities.MyProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/con_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="@dimen/dp_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_arrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/circularstd_medium"
+            android:gravity="center"
+            android:text="@string/my_profile"
+            android:textAllCaps="true"
+            android:textColor="@color/black_txt"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/circularstd_bold"
+            android:padding="@dimen/dp_16"
+            android:text="@string/logout"
+            android:textAllCaps="true"
+            android:textColor="@color/red_txt"
+            android:textSize="@dimen/sp_16"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/con_toolbar">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_launcher_background" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@drawable/myprofile_cam" />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/circularstd_book"
+        android:text="@string/save_changes"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_st"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp_16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp_16" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_40"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/guideline_st"
+        app:layout_constraintTop_toBottomOf="@id/frme">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txt_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fontFamily="@font/circularstd_medium"
+            android:gravity="start"
+            android:hint="@string/full_name"
+            android:inputType="textCapWords"
+            android:paddingTop="@dimen/dp_5"
+            android:text="Alan"
+            android:singleLine="true"
+            android:textColor="@color/black_txt"
+            android:textColorHint="@color/grey_txt"
+            android:textSize="@dimen/sp_16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/colorview"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toEndOf="@+id/guideline_st"
+        app:layout_constraintTop_toBottomOf="@+id/txt" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/guideline_st"
+        app:layout_constraintTop_toBottomOf="@id/view3">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txt_mobil_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fontFamily="@font/circularstd_medium"
+            android:gravity="start"
+            android:hint="@string/mobile_num"
+            android:inputType="number"
+            android:maxLength="10"
+            android:paddingTop="@dimen/dp_5"
+            android:singleLine="true"
+            android:text="+91 1234 567 890"
+            android:textColor="@color/grey_txt"
+            android:textColorHint="@color/grey_txt"
+            android:textSize="@dimen/sp_16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/colorview"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toEndOf="@+id/guideline_st"
+        app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:fontFamily="@font/circularstd_book"
+        android:text="@string/gender"
+        android:textColor="@color/grey_txt"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintStart_toStartOf="@+id/guideline_st"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <Spinner
+        android:id="@+id/spiner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_5"
+        app:layout_constraintEnd_toStartOf="@+id/txt3"
+        app:layout_constraintStart_toStartOf="@+id/guideline_st"
+        app:layout_constraintTop_toBottomOf="@+id/txt2" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintBottom_toBottomOf="@+id/spiner"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/spiner"
+        app:layout_constraintTop_toBottomOf="@id/view4">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txt_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fontFamily="@font/circularstd_medium"
+            android:gravity="start"
+            android:hint="@string/age"
+            android:paddingTop="@dimen/dp_5"
+            android:text="25"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/black_txt"
+            android:textColorHint="@color/grey_txt"
+            android:textSize="@dimen/sp_16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:background="@color/colorview"
+        app:layout_constraintEnd_toStartOf="@+id/view7"
+        app:layout_constraintStart_toEndOf="@+id/guideline_st"
+        app:layout_constraintTop_toBottomOf="@+id/spiner" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/dp_8"
+        android:background="@color/colorview"
+        app:layout_constraintBottom_toBottomOf="@+id/view6"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toEndOf="@+id/view6"
+        app:layout_constraintTop_toBottomOf="@+id/spiner" />
+
+    <TextView
+        android:id="@+id/textView99"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:fontFamily="@font/circularstd_book"
+        android:text="@string/address"
+        android:textColor="@color/grey_txt"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintStart_toStartOf="@+id/guideline_st"
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+    <TextView
+        android:id="@+id/txt_edt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_edit_btn"
+        android:text="@string/edit"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView99"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end" />
+
+    <TextView
+        android:id="@+id/txt_add"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:fontFamily="@font/circularstd_book"
+        android:text="B-1103, Hollywood Blvd Vine, St Los Angeles , St Los Angeles,  CA 90028"
+        android:textColor="@color/black_txt"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_percntage"
+        app:layout_constraintStart_toStartOf="@+id/guideline_st"
+        app:layout_constraintTop_toBottomOf="@+id/textView99" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_percntage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

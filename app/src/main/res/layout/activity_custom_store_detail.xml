@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".activities.CustomStoreDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/con_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="@dimen/dp_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_arrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_store_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/store_detail"
+            android:textColor="@color/black_txt"
+            android:textSize="@dimen/sp_18"
+            android:fontFamily="@font/circularstd_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/bg_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/con_toolbar" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp_16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_end="@dimen/dp_16" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_location_price"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toTopOf="@+id/btn_send_ordr_to_this_store"
+        app:layout_constraintEnd_toEndOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/view2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/img_item"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_store"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_stor_nm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/circularstd_medium"
+                    android:text="Store Name goes here "
+                    android:textColor="@color/black_txt"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintStart_toEndOf="@+id/img_item"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_store_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Retailer"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@+id/img_item"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_stor_nm" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_store_add"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:drawableStart="@drawable/store_location"
+                    android:drawableTint="@color/colorAccent"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="B-1103, Hollywood Blvd Vine, St Los Angeles , St Los Angeles,  CA 90028"
+                    android:textColor="@color/colorAccent"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:maxLines="3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/img_item" />
+<!--
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.8" />-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_ownr_nm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/ownr_nm"
+                android:textColor="@color/grey_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txt_ownr_name"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_ownr_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/circularstd_medium"
+                android:gravity="end"
+                android:text="Dennis Skinner"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/guideline13"
+                app:layout_constraintTop_toBottomOf="@+id/txt_other_info" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_mrchandiz_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/circularstd_medium"
+                android:gravity="end"
+                android:text="Allopathic, Ayurvedic, Homeopathic"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guideline13"
+                app:layout_constraintTop_toBottomOf="@+id/txt_ownr_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_gst_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/mrchndiz_category"
+                android:textColor="@color/grey_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txt_mrchandiz_category"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_other_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/other_info"
+                android:textAllCaps="true"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraint" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_drg_licens_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/establis_since"
+                android:textColor="@color/grey_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txt_drug_licens_no"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_drug_licens_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/circularstd_medium"
+                android:gravity="end"
+                android:text="1990"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/guideline13"
+                app:layout_constraintTop_toBottomOf="@+id/txt_mrchandiz_category" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_mrchndiz_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/gst_no"
+                android:textColor="@color/grey_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBaseline_toBaselineOf="@+id/edt_gst_no"
+                app:layout_constraintEnd_toStartOf="@+id/edt_gst_no"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/edt_gst_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/circularstd_medium"
+                android:gravity="end"
+                android:text="xxx-xxx-xxxx"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guideline13"
+                app:layout_constraintTop_toBottomOf="@+id/txt_drug_licens_no" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_pharmacist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/registered_pharmacist_name"
+                android:textColor="@color/grey_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txt_pharmacist_name"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_pharmacist_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/circularstd_medium"
+                android:gravity="end"
+                android:text=""
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/guideline13"
+                app:layout_constraintTop_toBottomOf="@+id/edt_gst_no" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/drug_licns_no"
+                android:textColor="@color/grey_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txt_establis_since"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_establis_since"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:fontFamily="@font/circularstd_medium"
+                android:gravity="end"
+                android:text="xxx-xxx-xxxx"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guideline13"
+                app:layout_constraintTop_toBottomOf="@+id/txt_pharmacist_name"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView40"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/address"
+                android:textColor="@color/grey_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txt_geo_location"
+                app:layout_constraintStart_toEndOf="@+id/txt_geo_location"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_geo_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:gravity="end"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="B-1103, Hollywood Blvd Vine, St Los Angeles , St Los Angeles,  CA 90028"
+                android:textColor="@color/black_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guideline13"
+                app:layout_constraintTop_toBottomOf="@+id/txt_establis_since" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/prefrd_paymnt"
+                android:textColor="@color/grey_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txt_prefrd_paymnt"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_prefrd_paymnt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:fontFamily="@font/circularstd_medium"
+                android:gravity="end"
+                android:text="COD, Paytm, Google Pay"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guideline13"
+                app:layout_constraintTop_toBottomOf="@+id/txt_geo_location"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_send_ordr_to_this_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/circularstd_bold"
+        android:text="@string/send_ordr_to_this_stor"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

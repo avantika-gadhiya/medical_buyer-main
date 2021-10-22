@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_18"
+    app:cardCornerRadius="@dimen/dp_5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_5">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/circularstd_book"
+                android:text="ID: 12345 67890"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_14" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_status1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/txt_status"
+                android:background="@drawable/custom_status"
+                android:backgroundTint="@color/st_active"
+                android:fontFamily="@font/circularstd_book"
+                android:text="@string/active"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_12" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/dp_5"
+                android:background="@drawable/custom_status"
+                android:backgroundTint="@color/st_delivered"
+                android:fontFamily="@font/circularstd_book"
+                android:text="@string/deliverd"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_12" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_dtntime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel"
+            android:layout_marginStart="@dimen/dp_10"
+            android:fontFamily="@font/circularstd_book"
+            android:text="2 JUN,2019 2:35 PM"
+            android:textColor="@color/grey_txt"
+            android:textSize="@dimen/sp_12" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/text_dtntime"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/bg_color" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_time_elapsed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:fontFamily="@font/circularstd_bookitalic"
+            android:text="Time Elapsed: 08h 45m 06s"
+            android:textColor="@color/green_txt"
+            android:textSize="@dimen/sp_12"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_edt_n_upload_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:fontFamily="@font/circularstd_bookitalic"
+            android:text="@string/edt_n_upload_again"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/option_icon" />
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

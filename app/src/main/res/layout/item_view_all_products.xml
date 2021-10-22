@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/img_clr_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_color_code"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_product_name"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_product_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_18"
+        android:fontFamily="@font/circularstd_medium"
+        android:paddingEnd="@dimen/dp_5"
+        android:text="Omeprazole"
+        android:textColor="@color/black_txt"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintEnd_toStartOf="@+id/txt_qntt"
+        app:layout_constraintStart_toEndOf="@+id/img_clr_code"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_brand_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/circularstd_book"
+        android:text="Bodyshop"
+        android:textColor="@color/colorGreyText"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintStart_toEndOf="@+id/img_clr_code"
+        app:layout_constraintTop_toBottomOf="@+id/txt_product_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/circularstd_book"
+        android:text="250 ml Bottle"
+        android:textColor="@color/colorGreyText"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintStart_toEndOf="@+id/img_clr_code"
+        app:layout_constraintTop_toBottomOf="@+id/txt_brand_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_qntt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:fontFamily="@font/circularstd_book"
+        android:text="@string/qty__"
+        android:textAllCaps="true"
+        android:textColor="@color/grey_txt"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edt_qntt"
+        app:layout_constraintEnd_toStartOf="@+id/edt_qntt" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/edt_qntt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_18"
+        android:fontFamily="@font/circularstd_book"
+        android:text="01"
+        android:textColor="@color/grey_txt"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_product_name"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "810498422703",
+    "project_id": "medical-1da8b",
+    "storage_bucket": "medical-1da8b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810498422703:android:b43a817fe1cdf2b34f215a",
+        "android_client_info": {
+          "package_name": "bluesharklabs.com.medical"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "810498422703-b1sgtpr2dbltkmkob81ou5n0lg4vcrsg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJHEmO4Y67Ht_eS-eWGT4NIC774iO7ijQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "810498422703-b1sgtpr2dbltkmkob81ou5n0lg4vcrsg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

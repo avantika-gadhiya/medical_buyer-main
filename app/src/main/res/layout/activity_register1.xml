@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nested_location_price"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/register_bg"
+            tools:context=".loginactivities.Register1Activity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/con_toolbar"
+                android:layout_width="0dp"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:padding="@dimen/dp_15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/back_arrow" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/circularstd_bold"
+                android:text="@string/add_ur_add"
+                android:textAllCaps="true"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/con_toolbar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_book"
+                android:text="2/3"
+                android:textColor="@color/grey_txt"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toStartOf="@+id/txt_skip"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/add1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_40"
+                android:background="@drawable/input_box"
+                android:fontFamily="@font/circularstd_book"
+                android:hint="@string/add_line1"
+                android:inputType="textCapWords"
+                android:paddingStart="@dimen/dp_30"
+                android:paddingEnd="@dimen/dp_30"
+                android:textColorHint="@color/grey_txt"
+                android:textSize="@dimen/sp_16"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/txt_count" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/add2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/input_box"
+                android:fontFamily="@font/circularstd_book"
+                android:hint="@string/add_line2"
+                android:inputType="textCapWords"
+                android:paddingStart="@dimen/dp_30"
+                android:paddingEnd="@dimen/dp_30"
+                android:textColorHint="@color/grey_txt"
+                android:textSize="@dimen/sp_16"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/add1" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/landmarke"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/input_box"
+                android:fontFamily="@font/circularstd_book"
+                android:hint="@string/landmark"
+                android:inputType="textCapWords"
+                android:paddingStart="@dimen/dp_30"
+                android:paddingEnd="@dimen/dp_30"
+                android:textColorHint="@color/grey_txt"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/add2" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/zipcodey"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:background="@drawable/half_input_box"
+                android:fontFamily="@font/circularstd_book"
+                android:gravity="center_vertical"
+                android:hint="@string/zipcode"
+                android:inputType="number"
+                android:paddingStart="@dimen/dp_30"
+                android:paddingEnd="@dimen/dp_30"
+                android:textColorHint="@color/grey_txt"
+                android:textSize="@dimen/sp_16"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="@+id/citye"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/citye"
+                app:layout_constraintTop_toTopOf="@+id/citye"
+                app:layout_constraintVertical_bias="1.0" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/citye"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:background="@drawable/half_input_box"
+                android:fontFamily="@font/circularstd_book"
+                android:hint="@string/city"
+                android:maxLines="1"
+                android:inputType="textCapWords"
+                android:paddingStart="@dimen/dp_30"
+                android:paddingEnd="@dimen/dp_30"
+                android:textColorHint="@color/grey_txt"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBottom_toTopOf="@+id/btn_next1"
+                app:layout_constraintEnd_toStartOf="@+id/zipcodey"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/landmarke"
+                app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/dp_20" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/dp_20" />
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_next1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:fontFamily="@font/circularstd_bold"
+                android:text="@string/next"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_book"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:text="@string/skip"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txt_count"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

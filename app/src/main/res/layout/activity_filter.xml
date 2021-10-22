@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        tools:context=".activities.FilterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/con_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:padding="@dimen/dp_15"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back_arrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_medium"
+                android:gravity="center"
+                android:text="@string/filter"
+                android:textAllCaps="true"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_16"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1.5dp"
+            android:background="@color/bg_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/con_toolbar" />
+
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_location_price"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clipToPadding="true"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true"
+            app:layout_constraintBottom_toTopOf="@+id/button_reset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/dp_16" />
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/dp_16" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView68"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:fontFamily="@font/circularstd_medium"
+                    android:text="@string/by_product"
+                    android:textColor="@color/black_txt"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_s"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recy_by_product"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_s"
+                    app:layout_constraintTop_toBottomOf="@+id/textView68">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <CheckBox
+                    android:id="@+id/checkBox_low_high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_30"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_s"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_to_time" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView69"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="@string/sort_by_low_high_price"
+                    android:textColor="@color/black_txt"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/checkBox_low_high"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/checkBox_low_high" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView70"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="@string/by_delivry_prefrnc"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black_txt"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_s"
+                    app:layout_constraintTop_toBottomOf="@+id/recy_by_product" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView122"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="@string/by_date"
+                    android:textColor="@color/black_txt"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_s"
+                    app:layout_constraintTop_toBottomOf="@+id/textView70" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_from_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:background="@drawable/bg_filter_time_piker"
+                    android:drawableEnd="@drawable/calender_icon"
+                    android:fontFamily="@font/circularstd_book"
+                    android:hint="@string/from_date"
+                    android:textColor="@color/black_txt"
+                    android:textColorHint="@color/grey_txt"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_to_date"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_s"
+                    app:layout_constraintTop_toBottomOf="@+id/textView122" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_to_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_filter_time_piker"
+                    android:drawableEnd="@drawable/calender_icon"
+                    android:fontFamily="@font/circularstd_book"
+                    android:hint="@string/to_date"
+                    android:textColor="@color/black_txt"
+                    android:textColorHint="@color/grey_txt"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/txt_from_date"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                    app:layout_constraintStart_toEndOf="@+id/txt_from_date" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView126"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="@string/by_time"
+                    android:textColor="@color/black_txt"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_s"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_from_date" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_from_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:background="@drawable/bg_filter_time_piker"
+                    android:drawableEnd="@drawable/clock_icon"
+                    android:fontFamily="@font/circularstd_book"
+                    android:hint="@string/from_time_"
+                    android:textColor="@color/black_txt"
+                    android:textColorHint="@color/grey_txt"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_to_time"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_s"
+                    app:layout_constraintTop_toBottomOf="@+id/textView126"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_to_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_filter_time_piker"
+                    android:drawableEnd="@drawable/clock_icon"
+                    android:fontFamily="@font/circularstd_book"
+                    android:hint="@string/to_time_"
+                    android:textColor="@color/black_txt"
+                    android:textColorHint="@color/grey_txt"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/txt_from_time"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                    app:layout_constraintStart_toEndOf="@+id/txt_from_time" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_reset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_reset"
+            android:fontFamily="@font/circularstd_bold"
+            android:text="@string/reset"
+            android:textColor="@color/black_txt"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_sendtostor"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_sendtostor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:fontFamily="@font/circularstd_bold"
+            android:text="@string/apply"
+            android:textColor="@color/colorWhite"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_reset" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_partial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

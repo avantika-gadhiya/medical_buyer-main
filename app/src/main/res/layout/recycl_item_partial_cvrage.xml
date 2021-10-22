@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_best_in_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:fontFamily="@font/circularstd_medium"
+        android:text="@string/best_in_price"
+        android:textAllCaps="true"
+        android:textColor="@color/grey_txt"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:padding="@dimen/dp_5"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_best_in_delvry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_best_in_price">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_bip_del_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_16"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="ZIP Address Delivery"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toStartOf="@+id/txt_bip_view_offer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_16"
+                app:layout_constraintEnd_toStartOf="@+id/rel_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_bip_del_type">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:src="@drawable/offer_date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/img_date"
+                    android:fontFamily="@font/circularstd_book"
+                    android:gravity="center"
+                    android:text="@string/delivery_date"
+                    android:textColor="@color/grey_txt"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintStart_toEndOf="@+id/img_date"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_bip_del_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_1"
+                    android:layout_marginStart="2dp"
+                    android:layout_toEndOf="@+id/img_date"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="July 9, 2019"
+                    android:textColor="@color/black_txt"
+                    android:textSize="@dimen/sp_13"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/txt_1"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rel_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginEnd="20dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/rel"
+                app:layout_constraintTop_toBottomOf="@+id/txt_bip_del_type">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:src="@drawable/offer_time"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/img_time"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="@string/delivery_time"
+                    android:textColor="@color/grey_txt"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/img_time"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_bip_del_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_2"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@+id/img_time"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="12:00 - 1:00 PM"
+                    android:textColor="@color/black_txt"
+                    android:textSize="@dimen/sp_13"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/img_time"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rel_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rel">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_bip_del_perc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="10 % OFF"
+                    android:textColor="@color/red_txt"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_bip_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_bip_del_perc"
+                    android:fontFamily="@font/circularstd_bold"
+                    android:text="Rs.1437.78"
+                    android:textColor="@color/green_txt"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/txt_bip_del_perc"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_bip_del_perc" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_bip_view_offer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:fontFamily="@font/circularstd_medium"
+                android:padding="@dimen/dp_5"
+                android:text="@string/view_offer"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txt_bip_del_type"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrain_delivry_time_out_OM"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_btn"
+                android:layout_marginTop="@dimen/dp_16"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rel">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewtop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="@string/delivery_time_out"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewbottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="@string/you_cant_make_ofer_now"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewtop" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@color/bg_color"
+                app:layout_constraintTop_toBottomOf="@+id/constrain_delivry_time_out_OM"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/txt_bip_reorder"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txt_bip_accept"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/re_order_icon"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:fontFamily="@font/circularstd_medium"
+                    android:gravity="center"
+                    android:text="@string/txt_reorder"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccent" />
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="1.5dp"
+                android:layout_height="@dimen/dp_30"
+                android:layout_margin="@dimen/dp_8"
+                android:background="@color/bg_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txt_bip_accept"
+                app:layout_constraintStart_toEndOf="@+id/txt_bip_reorder"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <RelativeLayout
+                android:id="@+id/txt_bip_accept"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txt_bip_reorder"
+                app:layout_constraintTop_toBottomOf="@+id/view">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_bip_accept_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/accept_icon"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:fontFamily="@font/circularstd_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="@string/accept"
+                    android:textAllCaps="true"
+                    android:textColor="@color/green_txt" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_best_in_delvry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:fontFamily="@font/circularstd_medium"
+        android:text="@string/best_in_delivery"
+        android:textAllCaps="true"
+        android:textColor="@color/grey_txt"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card1" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:padding="@dimen/dp_5"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_best_in_delvry">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_bid_del_typ"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_16"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="ZIP Address Delivery"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toStartOf="@+id/txt_bid_view_offer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rel_del_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_16"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/rel_3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/rel_3"
+                app:layout_constraintTop_toBottomOf="@+id/txt_bid_del_typ">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_del_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:src="@drawable/offer_time"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_del_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/img_del_time"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="@string/delivery_time"
+                    android:textColor="@color/grey_txt"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/img_del_time"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_bid_del_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_del_2"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@+id/img_del_time"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="12:00 - 1:00 PM"
+                    android:textColor="@color/black_txt"
+                    android:textSize="@dimen/sp_13"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/img_del_time"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_bid_view_offer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:fontFamily="@font/circularstd_medium"
+                android:padding="@dimen/dp_5"
+                android:text="@string/view_offer"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txt_bid_del_typ"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rel_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_16"
+                app:layout_constraintEnd_toStartOf="@+id/rel_del_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_bid_del_typ">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_del_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:src="@drawable/offer_date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_del_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/img_del_date"
+                    android:fontFamily="@font/circularstd_book"
+                    android:gravity="center"
+                    android:text="@string/delivery_date"
+                    android:textColor="@color/grey_txt"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintStart_toEndOf="@+id/img_del_date"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_bid_del_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_del_1"
+                    android:layout_marginStart="2dp"
+                    android:layout_toEndOf="@+id/img_del_date"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="July 9, 2019"
+                    android:textColor="@color/black_txt"
+                    android:textSize="@dimen/sp_13"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/txt_del_1"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_del_1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rel_del_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_bid_del_typ">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_bid_perc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="10 % OFF"
+                    android:textColor="@color/red_txt"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_bid_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_bid_perc"
+                    android:fontFamily="@font/circularstd_bold"
+                    android:text="Rs.1437.78"
+                    android:textColor="@color/green_txt"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/txt_bid_perc"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_bid_perc" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constrain_delivry_time_out_OM_BED" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrain_delivry_time_out_OM_BED"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@color/grey_btn"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rel_3">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewtop_BED"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="@string/delivery_time_out"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewbottom_BED"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="@string/you_cant_make_ofer_now"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewtop_BED" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/txt_bid_reorder"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txt_bid_accept"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view5">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/re_order_icon"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:fontFamily="@font/circularstd_medium"
+                    android:gravity="center"
+                    android:text="@string/txt_reorder"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccent" />
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="1.5dp"
+                android:layout_height="@dimen/dp_30"
+                android:layout_margin="@dimen/dp_8"
+                android:background="@color/bg_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txt_bid_accept"
+                app:layout_constraintStart_toEndOf="@+id/txt_bid_reorder"
+                app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+            <RelativeLayout
+                android:id="@+id/txt_bid_accept"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txt_bid_reorder"
+                app:layout_constraintTop_toBottomOf="@+id/view5">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_bid_accept_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/accept_icon"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:fontFamily="@font/circularstd_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="@string/accept"
+                    android:textAllCaps="true"
+                    android:textColor="@color/green_txt" />
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp_5">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/imgFood"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/prescription_img" />
+
+        <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ID 12345 67890"
+                android:layout_marginTop="@dimen/dp_16"
+                android:textColor="@color/black_txt"
+                android:fontFamily="@font/circularstd_book"
+                android:textSize="@dimen/sp_16"
+                android:layout_marginStart="@dimen/dp_5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgFood" />
+
+        <TextView
+                android:id="@+id/textView100"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="5 JUN, 2019 2:35 PM"
+                android:textColor="@color/grey_txt"
+                android:fontFamily="@font/circularstd_book"
+                android:textSize="@dimen/sp_11"
+                android:layout_marginStart="@dimen/dp_5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+        <View
+                android:id="@+id/view10"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView100" />
+
+        <TextView
+                android:id="@+id/txt_order_now"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/order_now"
+                android:textColor="@color/colorAccent"
+                android:textAllCaps="true"
+                android:fontFamily="@font/circularstd_medium"
+                android:gravity="center"
+                android:padding="@dimen/dp_10"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view10" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

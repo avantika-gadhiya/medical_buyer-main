@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#389bf1</color>
+    <color name="colorPrimaryDark">#389bf1</color>
+    <color name="colorAccent">#389bf1</color>
+
+
+    <color name="black_txt">#272727</color>
+    <color name="black">#000000</color>
+    <color name="grey_txt">#8697b7</color>
+
+    <color name="colorBlackWithAlpha">#33000000</color>
+    <color name="colorlightGrey">#0F000000</color>
+    <color name="coloroffWhite">#B3FFFFFF</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorGray">#57FFFFFF</color>
+    <color name="colorLightGray">#DADADA</color>
+    <color name="colorDarkGray">#858585</color>
+    <color name="colorGreyText">#838e9c</color>
+    <color name="colorview">#5B838E9C</color>
+
+    <color name="by_prescription_bg">#4db6ac</color>
+    <color name="custom_order">#7986cb</color>
+
+    <color name="full_cvrage">#8279ed</color>
+    <color name="partial_cvrage">#99ccb9</color>
+
+    <color name="bg_color">#eef0f5</color>
+    <color name="bg_color_txt">#6F545DAC</color>
+    <color name="green_txt">#4db49d</color>
+    <color name="red_txt">#E44949</color>
+
+    <color name="transperent_backgroud">#00FFFFFF</color>
+    <color name="colorofWhite">#117E7777</color>
+    <color name="txt">#a9cc7a</color>
+
+
+    <!--status color-->
+    <color name="st_active">#77d0ce</color>
+    <color name="st_timed_out">#8da6af</color>
+    <color name="st_hrs">#f89a9a</color>
+    <color name="st_pending">#ffc267</color>
+    <color name="st_offer_made">#78b8ee</color>
+    <color name="st_accepted">#a9cc7a</color>
+    <color name="st_invoiced">#8fb5db</color>
+    <color name="st_delivered">#9dcc9f</color>
+
+    <color name="blue_clr">#389bf1</color>
+    <color name="grey_btn">#8da6af</color>
+    <color name="review_red_btn">#f14166</color>
+
+</resources>

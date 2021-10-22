@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".activities.FindPlatformActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp_16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp_16" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/con_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="@dimen/dp_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_arrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/circularstd_medium"
+            android:gravity="center"
+            android:text="@string/search_filtr"
+            android:textAllCaps="true"
+            android:textColor="@color/black_txt"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/bg_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/con_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sendtplatfrm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_st"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/dp_16" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_en"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/dp_16" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_book"
+                android:text="ID: 12345 67890"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_18"
+                android:visibility="gone"
+                app:layout_constraintBaseline_toBaselineOf="@+id/appCompatTextView2"
+                app:layout_constraintStart_toStartOf="@+id/guideline_st" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_book"
+                android:text="5 JUN, 2019 2:35 PM"
+                android:textColor="@color/grey_txt"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/guideline_st"
+                app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/custom_status"
+                android:backgroundTint="@color/bg_color_txt"
+                android:fontFamily="@font/circularstd_book"
+                android:text="@string/offer_made"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_12"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_en"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/custom_status"
+                android:backgroundTint="@color/grey_txt"
+                android:fontFamily="@font/circularstd_book"
+                android:text="@string/active_status"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_12"
+                android:visibility="gone"
+                app:layout_constraintBaseline_toBaselineOf="@+id/appCompatTextView"
+                app:layout_constraintEnd_toStartOf="@+id/appCompatTextView" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView30"
+                app:layout_goneMarginTop="0dp" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView32"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/circularstd_medium"
+                android:gravity="start"
+                android:inputType="textCapWords"
+                android:text="@string/select_stor_criteria"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_en"
+                app:layout_constraintStart_toStartOf="@+id/guideline_st"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+            <Spinner
+                android:id="@+id/spinr_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_en"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/textView33"
+                app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+            <View
+                android:id="@+id/view_1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_en"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/spinr_type"
+                app:layout_constraintTop_toBottomOf="@+id/spinr_type" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_for_spin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.14739229" />
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_city_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_en"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/tvCity"
+                app:layout_constraintTop_toBottomOf="@+id/tvCity"/>
+
+
+
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_en"
+                app:layout_constraintStart_toStartOf="@+id/txt_city_name"
+                app:layout_constraintTop_toBottomOf="@+id/txt_city_name" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_merchandice_cates"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dp_8"
+                    android:visibility="visible"
+                    android:fontFamily="@font/circularstd_book"
+                    android:text="@string/mrchndiz_category_select"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:textColor="@color/black_txt"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_en"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView37"
+                    app:layout_constraintTop_toBottomOf="@+id/textView37"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:fontFamily="@font/circularstd_book"
+                android:inputType="textCapWords"
+                android:text="@string/mrchndiz_category"
+                android:textColor="@color/grey_txt"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toEndOf="@+id/chkbox_by_merch"
+                app:layout_constraintTop_toTopOf="@+id/chkbox_by_merch" />
+
+            <Spinner
+                android:id="@+id/spinr_mrchn_ctgr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_8"
+                android:visibility="gone"
+                android:paddingBottom="@dimen/dp_8"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_en"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView37"
+                app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+
+
+
+            <View
+                android:id="@+id/view_5"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_en"
+                app:layout_constraintStart_toStartOf="@+id/textView37"
+                app:layout_constraintTop_toBottomOf="@+id/txt_merchandice_cates" />
+
+            <View
+                android:id="@+id/view_6"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="@dimen/dp_30"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_5" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/circularstd_medium"
+                android:inputType="textCapWords"
+                android:text="@string/select_location_critria"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintStart_toStartOf="@+id/guideline_st"
+                app:layout_constraintTop_toBottomOf="@+id/view_6" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/chkbox_by_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline_st"
+                app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/chkbox_by_delivery_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline_st"
+                app:layout_constraintTop_toBottomOf="@+id/chkbox_by_location" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_near_by_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_book"
+                android:text="@string/txt_chkbox1"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBaseline_toBaselineOf="@+id/chkbox_by_location"
+                app:layout_constraintEnd_toStartOf="@+id/switch_location_search"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline_for_spin" />
+
+
+            <Switch
+                android:id="@+id/switch_location_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="2dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/txt_near_by_location"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_en"
+                app:layout_constraintStart_toEndOf="@+id/txt_near_by_location"
+                app:layout_constraintTop_toTopOf="@+id/txt_near_by_location" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_near_by_delivery_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_book"
+                android:text="@string/txt_chkbox2"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBaseline_toBaselineOf="@+id/chkbox_by_delivery_location"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_en"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline_for_spin" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/chkbox_by_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline_st"
+                app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:fontFamily="@font/circularstd_book"
+                android:text="@string/type"
+                android:textColor="@color/grey_txt"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toEndOf="@+id/chkbox_by_type"
+                app:layout_constraintTop_toTopOf="@+id/chkbox_by_type" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/chkbox_by_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline_st"
+                app:layout_constraintTop_toBottomOf="@+id/view_1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:fontFamily="@font/circularstd_book"
+                android:text="Delivery City*"
+                android:textColor="@color/grey_txt"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toEndOf="@+id/chkbox_by_city"
+                app:layout_constraintTop_toTopOf="@+id/chkbox_by_city" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/chkbox_by_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                app:layout_constraintStart_toStartOf="@+id/guideline_st"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:fontFamily="@font/circularstd_book"
+                android:text="Area"
+                android:textColor="@color/grey_txt"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toEndOf="@+id/chkbox_by_area"
+                app:layout_constraintTop_toTopOf="@+id/chkbox_by_area" />
+
+
+            <Spinner
+                android:id="@+id/spinr_area"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_en"
+                app:layout_constraintStart_toStartOf="@+id/tvArea"
+                app:layout_constraintTop_toBottomOf="@+id/tvArea" />
+
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_en"
+                app:layout_constraintStart_toStartOf="@+id/spinr_area"
+                app:layout_constraintTop_toBottomOf="@+id/spinr_area" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/chkbox_by_zipcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline_st"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvZipCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:fontFamily="@font/circularstd_book"
+                android:text="Zip Code"
+                android:textColor="@color/grey_txt"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toEndOf="@+id/chkbox_by_zipcode"
+                app:layout_constraintTop_toTopOf="@+id/chkbox_by_zipcode" />
+
+
+            <Spinner
+                android:id="@+id/spinr_zipcode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_en"
+                app:layout_constraintStart_toStartOf="@+id/tvZipCode"
+                app:layout_constraintTop_toBottomOf="@+id/tvZipCode" />
+
+
+            <View
+                android:id="@+id/view4_"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_en"
+                app:layout_constraintStart_toStartOf="@+id/spinr_zipcode"
+                app:layout_constraintTop_toBottomOf="@+id/spinr_zipcode" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/chkbox_by_merch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline_st"
+                app:layout_constraintTop_toBottomOf="@+id/view4_" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_sendtplatfrm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/circularstd_bold"
+        android:text="@string/send_ordr_to_store"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".activities.CustomFinalOrderActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/con_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="@dimen/dp_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_arrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/circularstd_bold"
+            android:gravity="center"
+            android:text="@string/final_order"
+            android:textAllCaps="true"
+            android:textColor="@color/black_txt"
+            android:textSize="@dimen/sp_16"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_order_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/circularstd_medium"
+            android:gravity="center"
+            android:text="ID:123456"
+            android:textColor="@color/black_txt"
+            android:textSize="@dimen/sp_16"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/txt_order_dtntime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_order_dtntime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/circularstd_book"
+            android:text="5 JUN, 2019 2:35 pm"
+            android:textColor="@color/grey_txt"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_order_id"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:background="@color/bg_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/con_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_location_price"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorWhite"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toTopOf="@+id/constraint_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/con_toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@color/colorWhite">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/dp_16" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="16dp" />
+
+
+            <RelativeLayout
+                android:id="@+id/rel_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_color"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:id="@+id/rel_priscription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_color"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_prescr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/prescription_img"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/edt_prescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/custom_edit_btn"
+                        android:text="@string/edit"
+                        android:textColor="@color/colorWhite"
+                        android:visibility="visible"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </RelativeLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constrain_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/colorWhite"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView93"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:fontFamily="@font/circularstd_medium"
+                        android:text="@string/your_products"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grey_txt"
+                        android:textSize="@dimen/sp_14"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView93" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_view_all_produts"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:fontFamily="@font/circularstd_medium"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_12"
+                        android:text="@string/view_all_products"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/sp_15"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/recycl" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/edt_prodcts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:background="@drawable/custom_edit_btn"
+                        android:text="@string/edit"
+                        android:textColor="@color/colorWhite"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrain_prescription"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/colorWhite"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- <View
+                     android:id="@+id/vieww"
+                     android:layout_width="0dp"
+                     android:layout_height="5dp"
+                     android:visibility="gone"
+                     android:layout_marginBottom="@dimen/dp_12"
+                     android:background="@color/bg_color"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     app:layout_constraintVertical_bias="1.0" />
+ -->
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <View
+                android:id="@+id/view_1"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rel_img"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/order_for"
+                android:textAllCaps="true"
+                android:textColor="@color/grey_txt"
+                app:layout_constraintBaseline_toBaselineOf="@+id/edt_order"
+                app:layout_constraintStart_toStartOf="@+id/guideline6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/edt_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/custom_edit_btn"
+                android:text="@string/edit"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toBottomOf="@+id/view_1"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_ordering_for"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/family_member"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="7dp"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_ordering_for"
+                tools:layout_editor_absoluteY="631dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_order_prefrnc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/order_prefrnc"
+                android:textAllCaps="true"
+                android:textColor="@color/grey_txt"
+                app:layout_constraintBaseline_toBaselineOf="@+id/edt_order_prefrnc"
+                app:layout_constraintStart_toStartOf="@+id/guideline6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/edt_order_prefrnc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/custom_edit_btn"
+                android:text="@string/edit"
+                android:textColor="@color/colorWhite"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_ordr_prefrnc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="Only Prescription Brands"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toStartOf="@+id/guideline23"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toBottomOf="@+id/txt_order_prefrnc" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="7dp"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_ordr_prefrnc" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/delivery_prefrnc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/delivery_prefrnc"
+                android:textAllCaps="true"
+                android:textColor="@color/grey_txt"
+                app:layout_constraintBaseline_toBaselineOf="@+id/edt_delivery_prefrnc"
+                app:layout_constraintStart_toStartOf="@+id/guideline6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/edt_delivery_prefrnc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/custom_edit_btn"
+                android:text="@string/edit"
+                android:textColor="@color/colorWhite"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_title_delivery_prefrnc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="Zip Address Delivery"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toBottomOf="@+id/delivery_prefrnc"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_delivery_prefrnc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_book"
+                android:gravity="start"
+                android:text="B-1103, Hollywood Blvd Vine, St Los Angeles,  CA 90028"
+                android:textColor="@color/black_txt"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_delivery_prefrnc" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_geo_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:drawableStart="@drawable/google_pin"
+                android:drawableTint="@color/blue_clr"
+                android:fontFamily="@font/circularstd_book"
+                android:text=""
+                android:textColor="@color/blue_clr"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toBottomOf="@+id/txt_delivery_prefrnc" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="7dp"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@color/bg_color"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_geo_location" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/prefer_scedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/delivery_schedule"
+                android:textAllCaps="true"
+                android:textColor="@color/grey_txt"
+                android:visibility="visible"
+                app:layout_constraintBaseline_toBaselineOf="@+id/edt_prefer_scedule"
+                app:layout_constraintStart_toStartOf="@+id/guideline6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/edt_prefer_scedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/custom_edit_btn"
+                android:text="@string/edit"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dellivery_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/delivery_date"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_16"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toBottomOf="@+id/prefer_scedule" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_delivery_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/circularstd_book"
+                android:text=""
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_14"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toBottomOf="@+id/dellivery_date" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/delivery_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/delivery_time"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_16"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toBottomOf="@+id/txt_delivery_date" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_delivery_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_book"
+                android:paddingBottom="@dimen/dp_10"
+                android:text=""
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toBottomOf="@+id/delivery_time" />
+
+            <!-- <androidx.appcompat.widget.AppCompatTextView
+                 android:id="@+id/dellivery_date"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="@dimen/dp_16"
+                 android:fontFamily="@font/circularstd_medium"
+                 android:text="@string/delivery_date_"
+                 android:textColor="@color/black_txt"
+                 android:textSize="@dimen/sp_16"
+                 android:visibility="visible"
+                 app:layout_constraintStart_toStartOf="@+id/guideline6"
+                 app:layout_constraintTop_toBottomOf="@+id/prefer_scedule" />
+
+             <androidx.appcompat.widget.AppCompatTextView
+                 android:id="@+id/delivery_time"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="20dp"
+                 android:fontFamily="@font/circularstd_medium"
+                 android:text="@string/delivery_time"
+                 android:textColor="@color/black_txt"
+                 android:textSize="@dimen/sp_16"
+                 android:visibility="visible"
+                 app:layout_constraintBaseline_toBaselineOf="@+id/dellivery_date"
+                 app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                 app:layout_constraintStart_toEndOf="@+id/dellivery_date" />
+
+             <androidx.appcompat.widget.AppCompatTextView
+                 android:id="@+id/txt_delivery_date"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginBottom="16dp"
+                 android:fontFamily="@font/circularstd_book"
+                 android:text="10 july, 2019"
+                 android:textColor="@color/black_txt"
+                 android:textSize="@dimen/sp_14"
+                 android:visibility="visible"
+                 app:layout_constraintStart_toStartOf="@+id/guideline6"
+                 app:layout_constraintTop_toBottomOf="@+id/dellivery_date" />
+
+             <androidx.appcompat.widget.AppCompatTextView
+                 android:id="@+id/txt_delivery_time"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="@dimen/dp_20"
+                 android:layout_marginBottom="@dimen/dp_16"
+                 android:fontFamily="@font/circularstd_book"
+                 android:paddingBottom="@dimen/dp_10"
+                 android:text="From 11 am to 1 pm"
+                 android:textColor="@color/black_txt"
+                 android:textSize="@dimen/sp_14"
+                 android:visibility="visible"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                 app:layout_constraintStart_toEndOf="@+id/dellivery_date"
+                 app:layout_constraintTop_toBottomOf="@+id/delivery_time"
+                 app:layout_constraintVertical_bias="0" />-->
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.8" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_bottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorlightGrey"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_sendtopltfrm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_btn"
+            android:fontFamily="@font/circularstd_bold"
+            android:text="@string/send_to_market"
+            android:textColor="@color/black_txt"
+            android:textSize="@dimen/sp_14"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_sendtostor"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_sendtostor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:fontFamily="@font/circularstd_bold"
+            android:text="@string/send_to_store"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_14"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_sendtopltfrm" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_review_ordr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:fontFamily="@font/circularstd_bold"
+            android:text="@string/re_order"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/circularstd_book"
+            android:gravity="center"
+            android:inputType="textCapWords"
+            android:padding="@dimen/dp_5"
+            android:text="@string/txt_only_after_custom"
+            android:textColor="@color/black_txt"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt1"
+            android:drawableStart="@drawable/timer_clock"
+            android:drawablePadding="@dimen/dp_5"
+            android:fontFamily="@font/circularstd_book"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp_5"
+            android:text="18h:45m:22s"
+            android:textColor="@color/black_txt"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.95" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
